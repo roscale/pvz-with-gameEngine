@@ -1,0 +1,16 @@
+{
+	"REGULAR": {
+		"hp": 1,
+		"damage": 1,
+
+		"sprite": "resources/Pea/",
+	},
+
+	"ICE": {
+		"hp": 1,
+		"damage": 1,
+		"effect": "SLOWDOWN",
+
+		"sprite": "resources/IcePea/",
+	},
+}

@@ -1,0 +1,60 @@
+{
+	"REGULAR": {
+		"hp": 1,
+		"walkSprite": "resources/RegularZombie/walk/",
+		"attackSprite": "resources/RegularZombie/attack/",
+		
+		"bodySprite": "resources/RegularZombie/body/",
+		"headSprite": "resources/RegularZombie/head/",
+		"lostHeadAttackSprite": "resources/RegularZombie/lostHeadAttack/",
+		"lostHeadWalkSprite": "resources/RegularZombie/lostHeadWalk/",
+	},
+
+	"FLAG": {
+		"hp": 10,
+		"walkSprite": "resources/FlagZombie/walk/",
+		"attackSprite": "resources/FlagZombie/attack/",
+
+		"bodySprite": "resources/RegularZombie/body/",
+		"headSprite": "resources/RegularZombie/head/",
+		"lostHeadAttackSprite": "resources/RegularZombie/lostHeadAttack/",
+		"lostHeadWalkSprite": "resources/RegularZombie/lostHeadWalk/",
+	},
+
+	"CONEHEAD": {
+		"hp": 20,
+		"walkSprite": "resources/ConeheadZombie/walk/",
+		"attackSprite": "resources/ConeheadZombie/attack/",
+
+		"bodySprite": "resources/RegularZombie/body/",
+		"headSprite": "resources/RegularZombie/head/",
+		"lostHeadAttackSprite": "resources/RegularZombie/lostHeadAttack/",
+		"lostHeadWalkSprite": "resources/RegularZombie/lostHeadWalk/",
+	},
+
+	"BUCKETHEAD": {
+		"hp": 30,
+		"walkSprite": "resources/BucketheadZombie/walk/",
+		"attackSprite": "resources/BucketheadZombie/attack/",
+
+		"bodySprite": "resources/RegularZombie/body/",
+		"headSprite": "resources/RegularZombie/head/",
+		"lostHeadAttackSprite": "resources/RegularZombie/lostHeadAttack/",
+		"lostHeadWalkSprite": "resources/RegularZombie/lostHeadWalk/",
+	},
+
+	"POLEVAULTING": {
+		"hp": 10,
+		"runSprite": "resources/PoleVaultingZombie/run/",
+		"jump1Sprite": "resources/PoleVaultingZombie/jump1/",
+		"jump2Sprite": "resources/PoleVaultingZombie/jump2/",
+		"walkSprite": "resources/PoleVaultingZombie/walk/",
+		"attackSprite": "resources/PoleVaultingZombie/attack/",
+
+		"bodySprite": "resources/PoleVaultingZombie/body/",
+		"headSprite": "resources/PoleVaultingZombie/head/",
+		"lostHeadRunSprite": "resources/PoleVaultingZombie/lostHeadRun/",
+		"lostHeadAttackSprite": "resources/PoleVaultingZombie/lostHeadAttack/",
+		"lostHeadWalkSprite": "resources/PoleVaultingZombie/lostHeadWalk/",
+	},
+}

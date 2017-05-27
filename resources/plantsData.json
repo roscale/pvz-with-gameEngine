@@ -1,0 +1,33 @@
+{
+	"SUNFLOWER": {
+		"hp": 3,
+		"cost": 5,
+		"cardImage": "resources/Cards/SunFlower.png",
+		"sprite": "resources/SunFlower/rest/",
+	},
+
+	"PEASHOOTER": {
+		"hp": 3,
+		"cost": 10,
+		"cardImage": "resources/Cards/Peashooter.png",
+		"sprite": "resources/Peashooter/rest/",
+	},
+
+	"SNOWPEA": {
+		"hp": 3,
+		"cost": 20,
+		"cardImage": "resources/Cards/SnowPea.png",
+		"sprite": "resources/SnowPea/rest/",
+	},
+
+	"WALLNUT": {
+		"hp": 30,
+		"cost": 20,
+		"cardImage": "resources/Cards/WallNut.png",
+		"sprite": "resources/WallNut/rest/",
+		"damagedSprites": [
+			"resources/WallNut/cracked1/",
+			"resources/WallNut/cracked2/",
+		],
+	},
+}
