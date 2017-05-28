@@ -12,12 +12,13 @@ public class Sun extends GameObject implements IInput
 
 		addComponent(SpriteRenderer.class).setSprite(Globals.sunSprite);
 		addComponent(Input.class).setSize(getComponent(SpriteRenderer.class).getSpriteSize());
+		addComponent(Physics.class);
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent event)
 	{
-		Shop.instance().invest(100);
+		Shop.instance().invest(25);
 		destroy();
 	}
 }

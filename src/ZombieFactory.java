@@ -9,7 +9,7 @@ public abstract class ZombieFactory
 {
 	public static Zombie getZombie(ZombieType type)
 	{
-		Zombie zombie = new Zombie(type, 1, -0.5f);
+		Zombie zombie = new Zombie(type, 1, -0.4f);
 
 		switch (type)
 		{

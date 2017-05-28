@@ -1,6 +1,6 @@
 {
 	"REGULAR": {
-		"hp": 1,
+		"hp": 10,
 		"walkSprite": "resources/RegularZombie/walk/",
 		"attackSprite": "resources/RegularZombie/attack/",
 		
@@ -17,8 +17,8 @@
 
 		"bodySprite": "resources/RegularZombie/body/",
 		"headSprite": "resources/RegularZombie/head/",
-		"lostHeadAttackSprite": "resources/RegularZombie/lostHeadAttack/",
-		"lostHeadWalkSprite": "resources/RegularZombie/lostHeadWalk/",
+		"lostHeadAttackSprite": "resources/FlagZombie/lostHeadAttack/",
+		"lostHeadWalkSprite": "resources/FlagZombie/lostHeadWalk/",
 	},
 
 	"CONEHEAD": {

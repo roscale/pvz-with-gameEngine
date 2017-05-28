@@ -1,7 +1,10 @@
 import gameEngine.InputManager;
+import gameEngine.Physics;
 import gameEngine.World;
 import processing.core.PApplet;
 import processing.event.MouseEvent;
+
+import java.util.Random;
 
 /**
  * Created by roscale on 4/30/17.
@@ -35,11 +38,21 @@ public class pvz extends PApplet
 		ZombieFactory.getZombie(ZombieType.FLAG).transform.setPosition(1000, 110);
 		ZombieFactory.getZombie(ZombieType.POLEVAULTING).transform.setPosition(1000, 210);
 		ZombieFactory.getZombie(ZombieType.FLAG).transform.setPosition(1000, 310);
-		ZombieFactory.getZombie(ZombieType.REGULAR).transform.setPosition(800, 410);
-		ZombieFactory.getZombie(ZombieType.REGULAR).transform.setPosition(800, 410);
-		ZombieFactory.getZombie(ZombieType.REGULAR).transform.setPosition(800, 410);
-		ZombieFactory.getZombie(ZombieType.REGULAR).transform.setPosition(800, 410);
-		ZombieFactory.getZombie(ZombieType.REGULAR).transform.setPosition(800, 410);
+		ZombieFactory.getZombie(ZombieType.REGULAR).transform.setPosition(1000, 410);
+
+		// Falling sun
+		new Thread(() -> {
+			Random r = new Random();
+
+			while (true)
+			{
+				Sun sun = (Sun) new Sun().transform.setPosition(r.nextInt(1116), -50).gameObject;
+				sun.getComponent(Physics.class).velocity.set(0, 1f);
+
+				try { Thread.sleep(10000); }
+				catch (InterruptedException e) { e.printStackTrace(); }
+			}
+		}).start();
 	}
 
 	public void draw()

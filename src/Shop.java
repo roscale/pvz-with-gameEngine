@@ -22,7 +22,7 @@ public class Shop extends GameObject implements IDrawable
 	//////////////////////////////////////////////////////////////
 
 	private ArrayList<Card> cards = new ArrayList<>();
-	private int balance = 999;
+	private int balance = 0;
 
 	private float cardMargin = 0;
 	private PVector balancePos = new PVector(150, 10);

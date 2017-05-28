@@ -22,7 +22,7 @@ class ThrowSun implements IPassiveBehaviour
 	public ThrowSun(Plant plant)
 	{
 		this.plant = plant;
-		this.counter = new Counter(600);
+		this.counter = new Counter(1440);
 	}
 
 	@Override
