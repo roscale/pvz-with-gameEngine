@@ -24,12 +24,12 @@ public class pvz extends PApplet
 
 		System.out.println();
 
-		Shop.instance().createItem(PlantType.SUNFLOWER);
-		Shop.instance().createItem(PlantType.SNOWPEA);
-		Shop.instance().createItem(PlantType.PEASHOOTER);
-		Shop.instance().createItem(PlantType.WALLNUT);
-		Shop.instance().createItem(PlantType.PEASHOOTER);
-		Shop.instance().createItem(PlantType.PEASHOOTER);
+		Shop.instance().createCard(PlantType.SUNFLOWER);
+		Shop.instance().createCard(PlantType.SNOWPEA);
+		Shop.instance().createCard(PlantType.PEASHOOTER);
+		Shop.instance().createCard(PlantType.WALLNUT);
+		Shop.instance().createCard(PlantType.PEASHOOTER);
+		Shop.instance().createCard(PlantType.PEASHOOTER);
 
 		ZombieFactory.getZombie(ZombieType.REGULAR).transform.setPosition(1000, 10);
 		ZombieFactory.getZombie(ZombieType.FLAG).transform.setPosition(1000, 110);

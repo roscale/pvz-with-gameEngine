@@ -160,14 +160,8 @@ public class Globals {
 			data.hp = peaObj.getFloat("hp");
 			data.damage = peaObj.getFloat("damage");
 
-			try
-			{
-				data.effectType = EffectType.valueOf(peaObj.getString("effect"));
-			}
-			catch (NullPointerException ignore)
-			{
-				data.effectType = null;
-			}
+			try { data.effectType = EffectType.valueOf(peaObj.getString("effect")); }
+			catch (NullPointerException ignore) { data.effectType = null; }
 
 			data.sprite = getSpriteOrNullFrom(peaObj.getString("sprite"), "png");
 

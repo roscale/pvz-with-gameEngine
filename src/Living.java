@@ -3,22 +3,15 @@ import gameEngine.*;
 /**
  * Created by roscale on 4/30/17.
  */
-public abstract class Living extends GameObject implements ICollider, IInput
+public abstract class Living extends GameObject implements ICollider
 {
 	public float hp;
-
 	public boolean dead = false;
 
 	public Living()
 	{
-		addComponent(SpriteRenderer.class);
 		addComponent(Collider.class);
-
-		getComponent(SpriteRenderer.class).setFrameRate(Globals.commonFrameRate);
-//		System.out.println(World.p.frameRate);
-
-		// Debugging
-//		addComponent(Input.class);
+		addComponent(SpriteRenderer.class).setFrameRate(Globals.commonFrameRate);
 	}
 
 	public boolean alive() { return hp > 0; }
@@ -34,10 +27,4 @@ public abstract class Living extends GameObject implements ICollider, IInput
 	}
 
 	public void die() { destroy(); }
-
-//	@Override
-//	public void mouseDragged(MouseEvent event)
-//	{
-//		transform.getPosition().add(Helper.getRelativeMousePos(World.p));
-//	}
 }

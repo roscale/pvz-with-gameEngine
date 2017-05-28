@@ -27,25 +27,23 @@ public class Shop extends GameObject implements IDrawable
 	private float cardMargin = 0;
 	private PVector balancePos = new PVector(150, 10);
 
-	private Shovel shovel = new Shovel(300, 10);
-
 	public Shop()
 	{
 		addComponent(CustomDraw.class);
-		transform.setZ(Layers.get("UI"));
+		transform.setPosition(0, 0).setZ(Layers.get("UI"));
 
-		transform.setPosition(0, 0);
+		Shovel.instance(); // Trigger the singleton
 	}
 
 	public int getBalance() { return balance; }
 
-	public void createItem(PlantType type)
+	public void createCard(PlantType type)
 	{
 		cards.add(new Card(type));
 		reposition();
 	}
 
-	public boolean buyItem(Card card)
+	public boolean buyCard(Card card)
 	{
 		if (card.getCost() <= balance)
 		{
@@ -61,7 +59,8 @@ public class Shop extends GameObject implements IDrawable
 	{
 		for (int i = 0; i < cards.size(); i++)
 		{
-			cards.get(i).transform.setPosition(PVector.add(this.transform.getPosition(), new PVector(0, i * (60 + cardMargin))));
+			PVector newPos = PVector.add(this.transform.getPosition(), new PVector(0, i * (60 + cardMargin)));
+			cards.get(i).transform.setPosition(newPos);
 			cards.get(i).setOrigin(cards.get(i).transform.getPosition());
 		}
 	}
@@ -147,7 +146,7 @@ public class Shop extends GameObject implements IDrawable
 					if (inputs.get(i + 1).gameObject.getClass() == Cell.class)
 					{
 						Cell cell = (Cell) inputs.get(i + 1).gameObject;
-						if (cell.isEmpty() && instance().buyItem(this))
+						if (cell.isEmpty() && instance().buyCard(this))
 							cell.setPlant(plantType);
 					}
 			moveToOrigin();
@@ -159,13 +158,23 @@ public class Shop extends GameObject implements IDrawable
 	 */
 	public static class Shovel extends GameObject implements IInput, IDrawable
 	{
+		private static Shovel instance;
+		public static Shovel instance()
+		{
+			if (instance == null)
+				instance = new Shovel();
+			return instance;
+		}
+
+		//////////////////////////////////////////////////////////////
+
 		private PVector origin = new PVector();
 
-		public Shovel(float x, float y)
+		public Shovel()
 		{
-			transform.setPosition(x, y);
+			transform.setPosition(300, 10);
 			transform.setZ(Layers.get("UI"));
-			setOrigin(new PVector(x, y));
+			setOrigin(transform.getPosition());
 
 			addComponent(CustomDraw.class);
 			addComponent(Input.class).setSize(new PVector(Globals.shovelBg.width, Globals.shovelBg.height));
@@ -191,7 +200,7 @@ public class Shop extends GameObject implements IDrawable
 						Cell cell = (Cell) inputs.get(i + 1).gameObject;
 						if (!cell.isEmpty())
 						{
-							instance().invest(Globals.plantsData.get(cell.plant.type).cost / 2);
+							Shop.instance().invest(Globals.plantsData.get(cell.plant.type).cost / 2);
 							cell.plant.destroy();
 						}
 					}

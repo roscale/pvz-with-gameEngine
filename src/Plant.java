@@ -1,4 +1,5 @@
 import gameEngine.*;
+import gameEngine.Object;
 import processing.event.MouseEvent;
 
 import java.util.ArrayList;
@@ -65,12 +66,4 @@ public class Plant extends Living
 
 	@Override
 	public void onDestroy() { if (cell != null) cell.clear(); }
-
-	@Override
-	public void mouseClicked(MouseEvent event)
-	{
-//		Pea pea = PeaFactory.getPea(peaType);
-//		pea.transform.setPosition(transform.getPosition());
-		destroy();
-	}
 }

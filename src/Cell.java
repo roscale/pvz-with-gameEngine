@@ -1,6 +1,7 @@
 import gameEngine.GameObject;
 import gameEngine.IInput;
 import gameEngine.Input;
+import gameEngine.Layers;
 import processing.core.PVector;
 
 /**
@@ -12,9 +13,7 @@ public class Cell extends GameObject implements IInput
 
 	public Cell(float x, float y, float w, float h)
 	{
-		transform.setPosition(x, y);
-		transform.setZ(-10);
-
+		transform.setPosition(x, y).setZ(Layers.get("Default"));
 		addComponent(Input.class).setSize(new PVector(w, h));
 	}
 

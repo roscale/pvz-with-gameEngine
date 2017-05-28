@@ -27,20 +27,3 @@ public abstract class PlantFactory
 		return plant;
 	}
 }
-
-
-//		try
-//		{
-//			if (Globals.plantsData.get(type).shootingBehaviourClass != null)
-//				plant.setShootingBehaviour((IShootingBehaviour) Globals.plantsData.get(type).shootingBehaviourClass.getConstructor(Plant.class, PeaType.class).newInstance(plant, Globals.plantsData.get(type).peaType));
-//		}
-//		catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e)
-//		{}
-//
-//		try
-//		{
-//			if (Globals.plantsData.get(type).passiveBehaviourClass != null)
-//				plant.setPassiveBehaviour((IPassiveBehaviour) Globals.plantsData.get(type).passiveBehaviourClass.getConstructor(Plant.class).newInstance(plant));
-//		}
-//		catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e)
-//		{}

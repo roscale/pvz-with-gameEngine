@@ -31,6 +31,5 @@ class ThrowSun implements IPassiveBehaviour
 		counter.increment();
 		if (counter.last())
 			new Sun().transform.setPosition(plant.transform.getPosition());
-//			Shop.instance().invest(10);
 	}
 }
