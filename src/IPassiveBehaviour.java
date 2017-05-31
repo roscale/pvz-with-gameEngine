@@ -1,4 +1,7 @@
-import gameEngine.Counter;
+import gameEngine.Layers;
+import gameEngine.components.SpriteRenderer;
+import gameEngine.gameObjects.Particle;
+import gameEngine.util.Counter;
 
 /**
  * Created by roscale on 5/18/17.
@@ -31,5 +34,30 @@ class ThrowSun implements IPassiveBehaviour
 		counter.increment();
 		if (counter.last())
 			new Sun().transform.setPosition(plant.transform.getPosition());
+	}
+}
+
+class Explode implements IPassiveBehaviour
+{
+	private Plant plant;
+
+	public Explode(Plant plant)
+	{
+		this.plant = plant;
+		plant.getComponent(SpriteRenderer.class).setSprite(Globals.plantsData.get(plant.type).sprite);
+
+		new Thread(() -> {
+			while (!plant.getComponent(SpriteRenderer.class).lastFrame());
+
+			new Particle(Globals.plantsData.get(plant.type).explodeSprite, Globals.commonFrameRate, false, 500).transform.setPosition(plant.transform.getPosition()).setZ(Layers.get("Sun"));
+
+			plant.destroy();
+		}).start();
+	}
+
+	@Override
+	public void execute()
+	{
+
 	}
 }

@@ -1,4 +1,7 @@
-import gameEngine.*;
+import gameEngine.GameObject;
+import gameEngine.Layers;
+import gameEngine.components.Collider;
+import gameEngine.components.Physics;
 import processing.core.PVector;
 
 import java.util.ArrayList;
@@ -22,7 +25,7 @@ public class Zombie extends Living
 
 		addComponent(Physics.class);
 
-		getComponent(Collider.class).setRelativePosition(new PVector(90, 70));
+		getComponent(Collider.class).setOffset(new PVector(90, 70));
 		getComponent(Collider.class).setSize(new PVector(40, 70));
 
 		this.type = type;

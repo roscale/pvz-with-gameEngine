@@ -1,7 +1,7 @@
 import gameEngine.GameObject;
-import gameEngine.IInput;
-import gameEngine.Input;
 import gameEngine.Layers;
+import gameEngine.components.Input;
+import gameEngine.components.callbacks.IInput;
 import processing.core.PVector;
 
 /**

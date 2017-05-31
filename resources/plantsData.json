@@ -30,4 +30,12 @@
 			"resources/WallNut/cracked2/",
 		],
 	},
+
+	"CHERRYBOMB": {
+		"hp": 999,
+		"cost": 1,
+		"cardImage": "resources/Cards/CherryBomb.png",
+		"sprite": "resources/CherryBomb/rest/",
+		"explodeSprite": "resources/CherryBomb/explode/",
+	}
 }

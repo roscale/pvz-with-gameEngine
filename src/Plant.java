@@ -1,6 +1,7 @@
-import gameEngine.*;
-import gameEngine.Object;
-import processing.event.MouseEvent;
+import gameEngine.Layers;
+import gameEngine.components.Collider;
+import gameEngine.components.SpriteRenderer;
+import gameEngine.util.Sprite;
 
 import java.util.ArrayList;
 

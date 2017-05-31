@@ -1,4 +1,7 @@
-import gameEngine.*;
+import gameEngine.GameObject;
+import gameEngine.components.Collider;
+import gameEngine.components.SpriteRenderer;
+import gameEngine.components.callbacks.ICollider;
 
 /**
  * Created by roscale on 4/30/17.

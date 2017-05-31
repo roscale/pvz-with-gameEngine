@@ -1,4 +1,9 @@
-import gameEngine.*;
+import gameEngine.GameObject;
+import gameEngine.components.SpriteRenderer;
+import gameEngine.util.Counter;
+import gameEngine.util.Helper;
+import gameEngine.util.IRaycastCondition;
+import gameEngine.util.Raycast;
 import processing.core.PVector;
 
 /**

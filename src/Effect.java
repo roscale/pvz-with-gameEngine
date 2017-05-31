@@ -1,6 +1,5 @@
-import gameEngine.Physics;
-import gameEngine.SpriteRenderer;
-import gameEngine.World;
+import gameEngine.components.Physics;
+import gameEngine.components.SpriteRenderer;
 import processing.core.PVector;
 
 /**

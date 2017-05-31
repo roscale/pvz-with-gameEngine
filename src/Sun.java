@@ -1,4 +1,9 @@
-import gameEngine.*;
+import gameEngine.GameObject;
+import gameEngine.Layers;
+import gameEngine.components.Input;
+import gameEngine.components.Physics;
+import gameEngine.components.SpriteRenderer;
+import gameEngine.components.callbacks.IInput;
 import processing.event.MouseEvent;
 
 /**

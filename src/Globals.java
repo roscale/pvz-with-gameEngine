@@ -1,6 +1,6 @@
 import gameEngine.Layers;
-import gameEngine.Sprite;
 import gameEngine.World;
+import gameEngine.util.Sprite;
 import processing.core.PApplet;
 import processing.core.PImage;
 import processing.core.PVector;
@@ -23,6 +23,7 @@ class PlantData
 	public PImage cardImage;
 	public Sprite sprite;
 	public ArrayList<Sprite> damagedSprites = new ArrayList<>();
+	public Sprite explodeSprite;
 }
 
 class ZombieData
@@ -116,6 +117,8 @@ public class Globals {
 			if (damagedSpritesArray != null)
 				for (String damagedSpritePath : damagedSpritesArray.getStringArray())
 					data.damagedSprites.add(new Sprite(damagedSpritePath, "png"));
+
+			data.explodeSprite = getSpriteOrNullFrom(plantObj.getString("explodeSprite"), "png");
 
 			plantsData.put(PlantType.valueOf((String) obj), data);
 		}

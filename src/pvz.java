@@ -1,6 +1,6 @@
-import gameEngine.InputManager;
-import gameEngine.Physics;
 import gameEngine.World;
+import gameEngine.components.Physics;
+import gameEngine.managers.InputManager;
 import processing.core.PApplet;
 import processing.event.MouseEvent;
 
@@ -28,11 +28,10 @@ public class pvz extends PApplet
 		System.out.println();
 
 		Shop.instance().createCard(PlantType.SUNFLOWER);
+		Shop.instance().createCard(PlantType.PEASHOOTER);
 		Shop.instance().createCard(PlantType.SNOWPEA);
-		Shop.instance().createCard(PlantType.PEASHOOTER);
 		Shop.instance().createCard(PlantType.WALLNUT);
-		Shop.instance().createCard(PlantType.PEASHOOTER);
-		Shop.instance().createCard(PlantType.PEASHOOTER);
+		Shop.instance().createCard(PlantType.CHERRYBOMB);
 
 		ZombieFactory.getZombie(ZombieType.REGULAR).transform.setPosition(1000, 10);
 		ZombieFactory.getZombie(ZombieType.FLAG).transform.setPosition(1000, 110);

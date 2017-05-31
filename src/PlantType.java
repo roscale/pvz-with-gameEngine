@@ -3,8 +3,9 @@
  */
 public enum PlantType
 {
+	SUNFLOWER,
 	PEASHOOTER,
 	SNOWPEA,
 	WALLNUT,
-	SUNFLOWER,
+	CHERRYBOMB,
 }

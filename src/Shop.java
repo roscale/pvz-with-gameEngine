@@ -1,4 +1,12 @@
-import gameEngine.*;
+import gameEngine.GameObject;
+import gameEngine.Layers;
+import gameEngine.World;
+import gameEngine.components.CustomDraw;
+import gameEngine.components.Input;
+import gameEngine.components.callbacks.IDrawable;
+import gameEngine.components.callbacks.IInput;
+import gameEngine.managers.InputManager;
+import gameEngine.util.Helper;
 import processing.core.PConstants;
 import processing.core.PImage;
 import processing.core.PVector;

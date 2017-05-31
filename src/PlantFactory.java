@@ -1,8 +1,3 @@
-import gameEngine.Collider;
-import gameEngine.SpriteRenderer;
-
-import java.lang.reflect.InvocationTargetException;
-
 /**
  * Created by roscale on 5/6/17.
  */
@@ -22,6 +17,8 @@ public abstract class PlantFactory
 				plant.setShootingBehaviour(new NormalShooting(plant, PeaType.ICE)); break;
 			case WALLNUT:
 				break;
+			case CHERRYBOMB:
+				plant.setPassiveBehaviour(new Explode(plant)); break;
 		}
 
 		return plant;

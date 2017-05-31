@@ -1,4 +1,7 @@
-import gameEngine.*;
+import gameEngine.GameObject;
+import gameEngine.components.Collider;
+import gameEngine.components.Physics;
+import gameEngine.components.SpriteRenderer;
 import processing.core.PVector;
 
 /**

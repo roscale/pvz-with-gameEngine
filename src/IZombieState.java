@@ -1,4 +1,9 @@
-import gameEngine.*;
+import gameEngine.components.Collider;
+import gameEngine.components.Physics;
+import gameEngine.components.SpriteRenderer;
+import gameEngine.gameObjects.Particle;
+import gameEngine.util.Counter;
+import gameEngine.util.Sprite;
 import processing.core.PVector;
 
 import java.util.ArrayList;
@@ -21,7 +26,7 @@ class RunState implements IZombieState
 
 		zombie.getComponent(SpriteRenderer.class).setSprite(Globals.zombiesData.get(zombie.type).runSprite);
 		zombie.getComponent(Physics.class).velocity.set(zombie.speed-1, 0);
-		zombie.getComponent(Collider.class).setRelativePosition(new PVector(50, 70));
+		zombie.getComponent(Collider.class).setOffset(new PVector(50, 70));
 	}
 
 	@Override
@@ -70,7 +75,7 @@ class JumpState implements IZombieState, Runnable
 		// Waiting
 		while (!zombie.getComponent(SpriteRenderer.class).lastFrame());
 
-		zombie.getComponent(Collider.class).setRelativePosition(new PVector(90, 70));
+		zombie.getComponent(Collider.class).setOffset(new PVector(90, 70));
 
 		zombie.getComponent(Collider.class).enable();
 		zombie.setState(new WalkState(zombie));

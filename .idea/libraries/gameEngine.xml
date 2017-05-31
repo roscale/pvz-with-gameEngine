@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="gameEngine">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/gameEngine.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../gameEngine/out/artifacts/gameEngine_jar/gameEngine.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
